@@ -1,0 +1,21 @@
+extends layout
+
+block content
+    .App
+        header.App-header
+            h1.App-title Is my Vape Safe?
+        body.App-Body Fuck me, I don't know how this shit is calculated
+            form.App-Form(action="/result") Wattage or some shit: 
+                input.App-Input(type="number" name="wattage") 
+                br  
+                span How many coils are you fucking around with? 
+                input.App-Input(type="number" name="coils")
+                br
+                span Are you using an RDA?
+                input.App-Input(type="radio" name="rda" value="true" checked) 
+                span Fuck Yes   
+                input.App-Input(name="rda" type="radio" value="false") 
+                span Hell No
+                br
+                br
+                input(type="submit" value="Am I going to Die?") 
