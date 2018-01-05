@@ -1,24 +1,23 @@
 extends layout
 
+
 block content
+    script(src="javascripts/homepage.js")
     .contact-form
         div
-            h1 Is my Vape Safe?
+            h1 Is my Vape Safe?       
         div
-            h2 Choose from a list of batteries
             form(action="/result")
+                h2 Choose from a list of batteries
                 div                 
                     label(for="battery")
-                        select(id="battery" name="battery" tabindex="4")
-                            option(value="{voltage:3.7, current:4}") IMR16340 3.7V 4A
-                            option(value="{voltage:3.7, current:4}") IMR14500 3.7V 4A
-                            option(value="{voltage:3.7, current:6}") IMR18350 3.7V 6A
-                            option(value="{voltage:3.7, current:15}") IMR18490 3.7V 15A
-                            option(value="{voltage:3.7, current:15}") IMR18650-1600 3.7V 15A
-            
-        h2 Or enter your own details
-        div
-            form(action="/result")
+                        select(id="battery" name="battery" tabindex="4" onchange="battery_selection_change();")
+                            option(value='{"voltage":3.7, "current":4}') IMR16340 3.7V 4A
+                            option(value='{"voltage":3.7, "current":4}') IMR14500 3.7V 4A
+                            option(value='{"voltage":3.7, "current":6}') IMR18350 3.7V 6A
+                            option(value='{"voltage":3.7, "current":15}') IMR18490 3.7V 15A
+                            option(value='{"voltage":3.7, "current":15}') IMR18650-1600 3.7V 15A
+                h2 Or enter your own details            
                 div
                   label(for="voltage")
                       span.required Voltage:  
