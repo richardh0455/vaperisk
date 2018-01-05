@@ -22,14 +22,14 @@ block content
                 div
                   label(for="voltage")
                       span.required Voltage:  
-                      input(type="number" id="voltage" name="voltage" value="" placeholder="Voltage" tabindex="2" required="required")
+                      input(type="number" step="0.01" id="voltage" name="voltage" value="" placeholder="Voltage" tabindex="2" required="required")
                 div                 
                     label(for="current")
                     span Current: 
-                    input(type="number" id="current" name="current" value="" placeholder="Current" tabindex="2" required="required")
+                    input(type="number" step="0.01" id="current" name="current" value="" placeholder="Current" tabindex="2" required="required")
                 div
                   label(for="resistance")
                       span.required Resistance: (required)
-                      input(type="number" id="resistance" name="resistance" value="" placeholder="Resistance" required="required" tabindex="1" autofocus="autofocus")
+                      input(type="number" step="0.01" id="resistance" name="resistance" value="" placeholder="Resistance" required="required" tabindex="1" autofocus="autofocus")
                 div                   
                   button(name="submit" type="submit" id="submit") Am I going to Die?
